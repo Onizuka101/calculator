@@ -11,7 +11,6 @@ public class CalculatorController {
         return "Добро пожаловать в калькулятор";
     }
 
-
     @GetMapping("/calculator/plus")
     public String plus(@RequestParam(value = "num1", required = false) Integer a, @RequestParam(value = "num2", required = false) Integer b) {
         if (a == null || b == null) {
