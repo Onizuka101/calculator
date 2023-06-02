@@ -1,6 +1,6 @@
 package Service;
 
-import com.example.calculator.controller.DivByZeroException;
+import com.example.calculator.controller.DevByZeroException;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -19,7 +19,7 @@ public class CalculatorService {
 
     public double divide(int a, int b) {
         if (b == 0) {
-            throw new DivByZeroException();
+            throw new DevByZeroException();
         }
         return a / (double) b;
     }
