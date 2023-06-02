@@ -1,5 +1,6 @@
 package com.example.calculator.controller;
 
+import Service.CalculatorService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -22,7 +23,7 @@ public class CalculatorController {
         if (a == null || b == null) {
             return "Не передан один из параметров";
         }
-            return a + " + " + b + " = " + calculatorService.plus(a,b);
+        return a + " + " + b + " = " + calculatorService.plus(a, b);
     }
 
     @GetMapping("/calculator/minus")
@@ -30,7 +31,7 @@ public class CalculatorController {
         if (a == null || b == null) {
             return "Не передан один из параметров";
         }
-            return a + " - " + b + " = "+ calculatorService.minus(a,b);
+        return a + " - " + b + " = " + calculatorService.minus(a, b);
     }
 
     @GetMapping("/calculator/multiply")
@@ -38,7 +39,7 @@ public class CalculatorController {
         if (a == null || b == null) {
             return "Не передан один из параметров";
         }
-            return a + " * " + b + " = " + calculatorService.miltiply(a,b);
+        return a + " * " + b + " = " + calculatorService.multiply(a, b);
     }
 
     @GetMapping("/calculator/divide")
@@ -46,9 +47,6 @@ public class CalculatorController {
         if (a == null || b == null) {
             return "Не передан один из параметров";
         }
-            if (b==0) {
-                return "На  0 делить нельзя";
-            }
-            return a + " / " + b + " = " + calculatorService.divide(a,b);
+        return a + " / " + b + " = " + calculatorService.divide(a, b);
     }
 }
