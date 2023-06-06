@@ -5,8 +5,6 @@ import com.example.calculator.controller.DivByZeroException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import java.security.DigestException;
-
 public class CalculatorServiceTest {
     private final CalculatorService calculatorService = new CalculatorService();
     @Test
